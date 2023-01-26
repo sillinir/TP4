@@ -26,7 +26,6 @@ class StringFoo:
 composer_message = StringFoo()
 composer_message.set_string("foo")
 composer_message.print_string()
-print("---------------------------------------------------------------------------------")
 
 
 """EXERCICE 2"""
@@ -51,7 +50,7 @@ resultat.longueur = 10
 resultat.largeur = 2
 resultat.calcul_aire()
 resultat.afficher_infos()
-print("---------------------------------------------------------------------------------")
+
 
 """EXERCICE 3"""
 
@@ -78,15 +77,14 @@ resultat.rayon = 11
 resultat.calcul_aire()
 resultat.calcul_circonference()
 resultat.afficher_infos()
-print("---------------------------------------------------------------------------------")
 
-"""EXERCICE 4 ET AUTRES"""
+"""EXERCICE 4 + 5 + 6"""
 
 
 class Hero:
     def __init__(self, nom):
         self.force_attaquer = randint(1, 6)
-        self.nbr_de_vies = randint(1, 10) + randint(1, 10)
+        self.nmbr_de_vies = randint(1, 10) + randint(1, 10)
         self.force_defense = randint(1, 6)
         self.nom = nom
         self.stats_du_joueur = PlayerStats()
@@ -95,11 +93,11 @@ class Hero:
         return randint(1, 6) + self.force_attaquer
 
     def recevoir_attaque(self):
-        self.nbr_de_vies -= randint(1, 6) - self.force_defense
-        return self.nbr_de_vies
+        self.nmbr_de_vies -= randint(1, 6) - self.force_defense
+        return self.nmbr_de_vies
 
     def est_vivant(self):
-        return self.nbr_de_vies > 0
+        return self.nmbr_de_vies > 0
 
 
 @dataclass
